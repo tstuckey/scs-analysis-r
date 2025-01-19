@@ -1,0 +1,3 @@
+[submodule "rocker-versioned2"]
+	path = rocker-versioned2
+	url = ssh://git@github.com/rocker-org/rocker-versioned2
