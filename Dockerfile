@@ -4,7 +4,10 @@ LABEL project="Simplifying Complex Spaces"
 
 # Install necessary libraries 
 #RUN install2.r --error tidyverse broom RSQLite knitr openxlsx roxygen2 olsrr
-#RUN install2.r --error ggplot2 broom RSQLite knitr openxlsx roxygen2 olsrr
-RUN install2.r --error  broom RSQLite knitr openxlsx abind Formula MASS mgcv nnet dplyr methods numDeriv Matrix doBy pbkrtest
 
-LABEL maintainer="Tom Stuckey"<tstuckey@simplifyingcomplexspaces.com>
+COPY ./rocker-versioned2/scripts/scripts  /rocker_scripts/
+
+#RUN /rocker_scripts/install_tidyverse.sh
+#RUN install2.r --error ggplot2 broom RSQLite knitr openxlsx roxygen2 olsrr
+
+LABEL maintainer="Tom Stuckey"<tstuckey@simplifyingcomplexspaces.com>   
