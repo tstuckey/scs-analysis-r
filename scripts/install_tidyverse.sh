@@ -1,7 +1,6 @@
 #!/bin/bash
 # Adapted from https://github.com/rocker-org/rocker-versioned2/blob/master/dockerfiles/tidyverse_4.4.2.Dockerfile
 # Removed duckdb
-# Added cmake
 set -e
 
 ## build ARGs

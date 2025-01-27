@@ -28,6 +28,8 @@ RUN install2.r --error \
     car \
     httpuv \
     shiny \
-    olsrr 
+    olsrr \
+    here
+    
     
 LABEL maintainer="Tom Stuckey"<tstuckey@simplifyingcomplexspaces.com>   
