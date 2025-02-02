@@ -6,7 +6,6 @@ LABEL project="Simplifying Complex Spaces"
 
 COPY ./scripts/install_tidyverse.sh  /scripts/
 
-# !!!INCLUDE THIS FOR FULL REBUILD
 RUN /scripts/install_tidyverse.sh # only include on full rebuilds 
 
 RUN apt-get update
