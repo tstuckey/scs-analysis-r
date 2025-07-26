@@ -9,7 +9,8 @@ COPY ./scripts/install_tidyverse.sh  /scripts/
 RUN /scripts/install_tidyverse.sh # only include on full rebuilds 
 
 RUN apt-get update
-RUN apt-get install -y --no-install-recommends libxml2-dev cmake pkg-config libz-dev
+RUN apt-get install -y --no-install-recommends libxml2-dev cmake pkg-config \
+libz-dev texlive-xetex lmodern texlive-fonts-recommended
 
 RUN install2.r --error \
     knitr \
@@ -28,7 +29,9 @@ RUN install2.r --error \
     httpuv \
     shiny \
     olsrr \
-    here
+    here 
+#    tinytex
     
+# RUN Rscript  -e "tinytex::install_tinytex()"    
     
 LABEL maintainer="Tom Stuckey"<tstuckey@simplifyingcomplexspaces.com>   
