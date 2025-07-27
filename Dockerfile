@@ -30,8 +30,5 @@ RUN install2.r --error \
     shiny \
     olsrr \
     here 
-#    tinytex
-    
-# RUN Rscript  -e "tinytex::install_tinytex()"    
     
 LABEL maintainer="Tom Stuckey"<tstuckey@simplifyingcomplexspaces.com>   
