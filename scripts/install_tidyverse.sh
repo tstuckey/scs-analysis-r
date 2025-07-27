@@ -1,6 +1,5 @@
 #!/bin/bash
-# Adapted from https://github.com/rocker-org/rocker-versioned2/blob/master/dockerfiles/tidyverse_4.4.2.Dockerfile
-# Removed duckdb
+# Adapted from https://github.com/rocker-org/rocker-versioned2/blob/master/scripts/install_tidyverse.sh
 set -e
 
 ## build ARGs
@@ -49,15 +48,11 @@ install2.r --error --skipmissing --skipinstalled -n "$NCPUS" \
     dbplyr \
     DBI \
     dtplyr \
-    nycflights13 \
     Lahman \
     RMariaDB \
     RPostgres \
     RSQLite \
     fst
-
-## a bridge to far? -- brings in another 60 packages
-# install2.r --error --skipinstalled -n "$NCPUS" tidymodels
 
 # Clean up
 rm -rf /var/lib/apt/lists/*
